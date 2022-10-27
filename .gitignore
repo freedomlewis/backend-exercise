@@ -1,0 +1,37 @@
+.idea
+settings.jar
+.pids
+*.pyc
+.DS_Store
+*.uml~
+*.iml
+
+## General temporary file directory
+/tmp/
+
+## Ignored tool directories
+/idea/out/
+/idea/.shelf/
+/dist/
+.vagrant/
+*.sublime-project
+*.sublime-workspace
+*.vscode
+bazel-bin
+bazel-genfiles
+bazel-out
+bazel-testlogs
+bazel-bazel-java-demo
+**/venv/
+.ijwb/
+
+## Bazel
+/bazel_support
+/build-support/bazel/bin/bazel-*
+/build-support/bazel/bin/bootstrapped-*
+/build-support/bazel/maven/m2/
+/build-support/bazel/maven/maven-3.3.9/
+/build-support/bazel/maven/maven_settings.xml
+
+## local java version flag
+.java-version
