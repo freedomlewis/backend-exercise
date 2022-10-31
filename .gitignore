@@ -5,9 +5,13 @@ settings.jar
 .DS_Store
 *.uml~
 *.iml
+.gradle
 
 ## General temporary file directory
 /tmp/
+
+## build
+build/
 
 ## Ignored tool directories
 /idea/out/
