@@ -14,7 +14,7 @@ public class Greeter {
 
   public void sayHello() {
     for (int i = 0; i < count; i++) {
-      System.out.println(message);
+      System.out.println(message + " " + i);
     }
   }
 }
