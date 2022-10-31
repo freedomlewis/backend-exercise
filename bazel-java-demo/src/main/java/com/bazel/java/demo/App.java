@@ -1,6 +1,6 @@
 package com.bazel.java.demo;
 
-import com.bazel.java.demo.guice.DemoModule;
+import com.bazel.java.demo.guice.module.DemoModule;
 import com.bazel.java.demo.guice.Greeter;
 import com.google.inject.Guice;
 import com.google.inject.Injector;

@@ -1,23 +1,11 @@
-package com.bazel.java.demo.guice;
+package com.bazel.java.demo.guice.module;
 
-import java.lang.annotation.Retention;
-
-import javax.inject.Qualifier;
-
+import com.bazel.java.demo.guice.annotation.Count;
+import com.bazel.java.demo.guice.annotation.Message;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
-
 public class DemoModule extends AbstractModule {
-  @Qualifier
-  @Retention(RUNTIME)
-  @interface Message {}
-
-  @Qualifier
-  @Retention(RUNTIME)
-  @interface Count {}
-
   @Provides
   @Count
   static Integer provideCount() {
