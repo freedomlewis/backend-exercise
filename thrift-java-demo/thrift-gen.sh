@@ -1,3 +1,3 @@
 #!/bin/sh
 
-thrift -r --gen java multiple.thrift
+thrift -r --gen java thrift/multiple.thrift

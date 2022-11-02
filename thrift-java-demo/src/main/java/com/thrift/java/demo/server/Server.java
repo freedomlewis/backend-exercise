@@ -30,7 +30,7 @@ public class Server {
 
   public static void simple(Processor processor) {
     try {
-      TServerTransport serverTransport = new TServerSocket(9090);
+      TServerTransport serverTransport = new TServerSocket(9001);
       TServer.Args args = new Args(serverTransport);
       args.processorFactory(new TProcessorFactory(processor));
       TServer server = new TSimpleServer(args);
