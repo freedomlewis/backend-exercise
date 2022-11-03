@@ -1,4 +1,4 @@
-# Use guice in Bazel demo
+# Thrift Java Demo
 
 ## Build the project
 
