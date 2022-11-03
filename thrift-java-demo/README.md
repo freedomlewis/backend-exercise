@@ -1,12 +1,26 @@
 # Use guice in Bazel demo
 
 ## Build the project
-    bazel build //:App
+```
+    bazel build //:Server
+    bazel build //:Client
+```
 
-## Run the App
-    bazel-bin/App
+## Run the server
+```
+    bazel-bin/Server
+    
+    // The message
+    The simple server start at port: 9001
+    
+    // This will print when the client connected
+    Multiply(3,5)
+```
 
-## The results
-    hello Bazel 0
-    hello Bazel 1
-    hello Bazel 2
+## Run the client
+```
+    bazel-bin/Client
+    
+    //The result
+    3*5=15
+```

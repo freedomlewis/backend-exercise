@@ -7,18 +7,17 @@ import org.apache.thrift.server.TServer.Args;
 import org.apache.thrift.server.TSimpleServer;
 import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TServerTransport;
-import org.apache.thrift.transport.TSocket;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Server {
+  public static final Logger logger = LoggerFactory.getLogger(Server.class.getName());
+  public static final int PORT = 9001;
 
-  public static Handler handler;
-
-  public static Processor processor;
-
-  public static void main(String [] args) {
+  public static void main(String[] args) {
     try {
-      handler = new Handler();
-      processor = new Processor(handler);
+      Handler handler = new Handler();
+      Processor processor = new Processor(handler);
 
       Runnable simple = () -> simple(processor);
 
@@ -28,18 +27,17 @@ public class Server {
     }
   }
 
-  public static void simple(Processor processor) {
+  private static void simple(Processor processor) {
     try {
-      TServerTransport serverTransport = new TServerSocket(9001);
+      TServerTransport serverTransport = new TServerSocket(PORT);
       TServer.Args args = new Args(serverTransport);
       args.processorFactory(new TProcessorFactory(processor));
       TServer server = new TSimpleServer(args);
 
-      System.out.println("Starting the simple server...");
+      logger.info("The simple server start at port: " + PORT);
       server.serve();
     } catch (Exception e) {
       e.printStackTrace();
     }
   }
-
 }
